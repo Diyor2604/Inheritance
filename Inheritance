@@ -1,0 +1,54 @@
+import java.util.Scanner;
+class employee{
+int eno;
+String name;
+float esal;
+String eaddr;
+public void getElement() {
+	System.out.println("Employee number:"+eno);
+	System.out.println("employee name:"+name);
+	System.out.println("employee salary:"+esal);
+	System.out.println("employee address:"+eaddr);
+}
+}
+class MAnager extends employee{
+	public MAnager(int empNo,String empName,float empSal,String empAddr) {
+		eno=empNo;
+		name=empName;
+		esal=empSal;
+		eaddr=empAddr;
+		
+	}
+	public void getManagerDetails() {
+		System.out.println("get the manager account");
+		System.out.println("------------ ");
+		getElement();
+	}
+}
+class Accountent extends employee{
+	public Accountent(int empNo,String empName,float empSal,String empAddr) {
+		eno=empNo;
+		name=empName;
+		esal=empSal;
+		eaddr=empAddr;
+	}
+	public void getAccountentDetails() {
+		System.out.println("Acoountant details");
+		System.out.println("--------------");
+		getElement();
+	}
+}
+
+public class Main{
+	public static void main(String[] args) {
+		MAnager mng=new MAnager (11,"AAA",50000,"HYD");
+		mng.getManagerDetails();
+		System.out.println();
+		Accountent acc=new Accountent(22,"BBB",25000,"HYD");
+		acc.getAccountentDetails();
+		
+	}	
+}
+
+
+
